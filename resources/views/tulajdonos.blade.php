@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('title','Tulaj')
 @section('content')
+@include ("menu")
 <h2>Üdv, Tulajdonos</h2>
 <form method="post" action="{{url('tulajdonos-save')}}">
     @csrf

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('title','Tulaj')
 @section('content')
+@include ('menu')
 <h2>Autók!</h2>
 <form method="post" action="{{url('auto-save')}}">
     @csrf
