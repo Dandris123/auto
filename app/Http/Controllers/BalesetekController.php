@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Balesetek;
 
-class AutoController extends Controller
+class BalesetekController extends Controller
 {
     public function index(){
-        
-         
-        
-        return view("Balesetek");
+        return view("baleset");
+    }
+
+    public function store(Request $request)
+    {
+        $tulajdonos = new Balesetek;
+        $tulajdonos->Idopont = $request->idopont;
+        $tulajdonos->serules_leirasa = $request->serules_leirasa;
+        $tulajdonos->save();
+        return redirect('baleset');
     }
 }
