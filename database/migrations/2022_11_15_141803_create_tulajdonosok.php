@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tulajdonosok', function (Blueprint $table) {
-            $table->id("t_id");
+            $table->id("id");
             $table->string("nev",50);
             $table->dateTime("tulajdonjog_kezd");
             $table->dateTime("tulajdonjog_veg");
+            $table->foreignId('autok_id')->references('id')->on('autok');
             $table->timestamps();
         });
     }

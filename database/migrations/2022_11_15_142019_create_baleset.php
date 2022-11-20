@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('baleset', function (Blueprint $table) {
-            $table->id("b_id");
+            $table->id("id");
             $table->dateTime("Idopont");
             $table->string("serules_leirasa",1000);
+            $table->foreignId('autok_id')->references('id')->on('autok');
             $table->timestamps();
         });
     }

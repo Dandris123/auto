@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('autok', function (Blueprint $table) {
-            $table->id("a_id");
+            $table->id("id");
             $table->string("rendszam",10);
             $table->string("tipus",20);
             $table->string("szin",30);

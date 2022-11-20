@@ -5,6 +5,9 @@
           <a class="nav-link" href="./auto">Autók regisztrálása</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="./auto-list">Autók listázása</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="./tulajdonos">Tulajdonos regisztrálása</a>
         </li>
         <li class="nav-item">
